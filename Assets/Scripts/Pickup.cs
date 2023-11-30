@@ -28,10 +28,7 @@ public class Pickup : MonoBehaviour
             {
                 // Cambia el arma actual por otra durante 30 segundos (implementa la lógica en el script del jugador).
                 collision.collider.GetComponent<HuasoScript>().ActivarArmaTemporal("Arma3", 30f);
-            } else
-            {
-
-            }
+            } 
 
             // Destruye el objeto después de la colisión.
             Destroy(gameObject);
