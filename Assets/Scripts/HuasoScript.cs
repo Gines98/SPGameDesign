@@ -170,4 +170,20 @@ public class HuasoScript : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
         beignHurt = false;
     }
+
+    public void SumarVida(int cantidad)
+    {
+        health += cantidad;
+        Debug.Log("Vida actual: " + health);
+    }
+
+    public void CambiarArma(string nombreArma)
+    {
+        // Lógica para cambiar el arma...
+    }
+
+    public void ActivarArmaTemporal(string nombreArma, float duracion)
+    {
+        // Lógica para activar temporalmente un arma...
+    }
 }
