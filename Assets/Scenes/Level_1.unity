@@ -9670,10 +9670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4a20a91af6f92489fe4921ac0add88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootOffset: 0.3
-  power: 1
-  speed: 2
-  bala: {fileID: 0}
+  pistolaDefault: {fileID: 11400000, guid: 8b56313e67496ac439057fb524474752, type: 2}
 --- !u!1 &1425733480
 GameObject:
   m_ObjectHideFlags: 0
