@@ -31,6 +31,19 @@ public class Bala : MonoBehaviour
         {
             BulletManager.Inst.balas.Add(this.gameObject);
             Debug.Log(collision.gameObject.name);
+            if (collision.tag == "Enemy")
+            {
+                collision.gameObject.GetComponent<EnemyComponent>().hp -= power;
+                if (collision.gameObject.GetComponent<EnemyComponent>().hp <= 0)
+                {
+                    Destroy(collision.gameObject);
+                }
+            }
+
+            if (collision.tag == "Player")
+            {
+                collision.gameObject.GetComponent<HuasoScript>().health -= power;
+            }
             this.gameObject.SetActive(false);
         }
     }
