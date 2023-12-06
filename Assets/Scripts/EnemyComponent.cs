@@ -14,7 +14,8 @@ public class EnemyComponent : MonoBehaviour
     {
         hp = configParameters.health;
         speed = configParameters.speed;
-        if (bulletPrefab)
+        if (bulletPrefab && (configParameters.enemyType == EnemyConfigObject.ENEMY_TYPE.MOVABLE_ENEMY_GUN ||
+                             configParameters.enemyType == EnemyConfigObject.ENEMY_TYPE.STATIC_ENEMY_GUN) )
         {
             StartCoroutine(ShootCoroutine());
         }
@@ -32,5 +33,11 @@ public class EnemyComponent : MonoBehaviour
     void Update()
     {
         bulletSpawnPoint.transform.LookAt(FindObjectOfType<HuasoScript>().transform.position);
+
+        if (configParameters.enemyType == EnemyConfigObject.ENEMY_TYPE.MOVABLE_ENEMY_GUN ||
+            configParameters.enemyType == EnemyConfigObject.ENEMY_TYPE.MOVABLE_ENEMY_NOGUN)
+        {
+            transform.position -= transform.right * speed * Time.deltaTime;
+        }
     }
 }
