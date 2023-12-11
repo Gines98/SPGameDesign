@@ -2886,7 +2886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0252dd2ca34ebd74da75a8b0d7617912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToFollow: {fileID: 544250120}
+  objectToFollow: {fileID: 420214322}
   leftBoundaryPosition: -2.31
   rightBoundartPosition: 71.98
 --- !u!20 &519420031
@@ -2969,7 +2969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   elapsedTime: 0
-  playerGameObject: {fileID: 544250120}
+  playerGameObject: {fileID: 420214322}
   endlessLevel: 0
   musicPlayer: {fileID: 567452644}
   musicLose: {fileID: 8300000, guid: 7dc6d9d33c1b5df488a74c4695eb3f31, type: 3}
@@ -3493,12 +3493,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1723168315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &544250120 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3909856367476950389, guid: a18567a397b185a4cba8bd735bcd083b,
-    type: 3}
-  m_PrefabInstance: {fileID: 3909856366939069565}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &547345232
 GameObject:
   m_ObjectHideFlags: 0
@@ -7556,7 +7550,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.125, y: 0, z: 8.677469}
-  m_LocalScale: {x: 0.25, y: 0.0625, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 101376260}
@@ -7602,9 +7596,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
+  m_Sprite: {fileID: 5601323976189978565, guid: 2edfd0eb34e1fa349824f67025b135d3,
     type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14548,6 +14542,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1448066901106251596, guid: 41c066894f685734a83d6c60ebf2159c,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 20bed46ffedecce49b2ffa8c1700faac, type: 2}
     - target: {fileID: 1448066901106251598, guid: 41c066894f685734a83d6c60ebf2159c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -16188,6 +16187,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Huaso
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909856367476950389, guid: a18567a397b185a4cba8bd735bcd083b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3909856367476950389, guid: a18567a397b185a4cba8bd735bcd083b,
         type: 3}

@@ -11,6 +11,6 @@ public class EndOfGameActionButton : MonoBehaviour
 
     public void EndGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu", UnityEngine.SceneManagement.LoadSceneMode.Single);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main_Menu", UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
 }
