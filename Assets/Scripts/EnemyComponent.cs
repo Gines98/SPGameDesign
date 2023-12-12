@@ -10,7 +10,7 @@ public class EnemyComponent : MonoBehaviour
     public GameObject bulletPrefab;
     public int speed;
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         hp = configParameters.health;
         speed = configParameters.speed;
@@ -30,7 +30,7 @@ public class EnemyComponent : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         bulletSpawnPoint.transform.LookAt(FindObjectOfType<HuasoScript>().transform.position);
 
