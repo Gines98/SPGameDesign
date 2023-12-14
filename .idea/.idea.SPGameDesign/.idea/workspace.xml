@@ -6,15 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="221f2bf1-d997-4e4e-8511-17c139c07cef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPGameDesign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPGameDesign/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/BalaPatroller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/BalaPatroller.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cow/Cow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cow/Cow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cow/CowScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cow/CowScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cow/Cow_Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cow/Cow_Config.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/PatrollCowScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/PatrollCowScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/PatrollCow_Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/PatrollCow_Config.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/PatrollCow_Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/PatrollCow_Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/PatrollCow_Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/PatrollCow_Walk.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/Patroll_Cow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/Patroll_Cow.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Disparos/BulletManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Disparos/BulletManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/sCI fI mAN.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/sCI fI mAN.psd.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +113,7 @@
       <workItem from="1702129779982" duration="1414000" />
       <workItem from="1702263497931" duration="1835000" />
       <workItem from="1702352814475" duration="814000" />
-      <workItem from="1702520082992" duration="1507000" />
+      <workItem from="1702520082992" duration="3555000" />
     </task>
     <servers />
   </component>

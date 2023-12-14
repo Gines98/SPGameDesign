@@ -35,7 +35,7 @@ public class PatrollCowScript : EnemyComponent
         { // We wait to the patroller to end its shooting animation (Which is the idle state) Once it finishes it repeats the cycle until the elapsed time in idle state is equal or higher the predefined time for the Idle State
             yield return new WaitForSeconds(gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
                 .length/2);
-            yield return StartCoroutine(ShootCoroutine()); //We make it shoot the bullet at the middle of the animation
+            yield return StartCoroutine(ShootCoroutine(direction, Time.deltaTime)); //We make it shoot the bullet at the middle of the animation
             yield return new WaitForSeconds(gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
                 .length/2);
             elapsedIdleSeconds += gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip

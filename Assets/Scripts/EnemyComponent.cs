@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class EnemyComponent : MonoBehaviour
@@ -22,10 +23,11 @@ public class EnemyComponent : MonoBehaviour
         
     }
 
-    protected IEnumerator ShootCoroutine()
+    protected IEnumerator ShootCoroutine(int direction, float secondsDelay)
     {
-        BulletManager.Inst.Disparar(configParameters.damage, bulletSpawnPoint.transform.position, configParameters.gunSpeed, bulletSpawnPoint.transform.rotation , "Enemy", configParameters.bulletSprite);
-        yield return new WaitForSeconds(configParameters.gunDelay);
+        BulletManager.Inst.Disparar(configParameters.damage, bulletSpawnPoint.transform.position, configParameters.gunSpeed * direction, bulletSpawnPoint.transform.rotation , "Enemy", configParameters.bulletSprite, bulletPrefab);
+        yield return new WaitForSeconds(secondsDelay);
+        //yield return new WaitForSeconds(configParameters.gunDelay);
         //StartCoroutine(ShootCoroutine());
     }
 

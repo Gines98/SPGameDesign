@@ -47,8 +47,15 @@ public class BulletManager : MonoBehaviour
         {
             if (!specificPrefab)
             {
-                disparo = balas[0];
-                balas.Remove(disparo);
+                if (balas.Any(x => x == prefabBala))
+                {
+                    disparo = balas.Where(x=> x == prefabBala).ElementAt(0);
+                    balas.Remove(disparo);
+                }
+                else
+                {
+                    disparo = Instantiate(prefabBala);
+                }
             }
             else
             {
