@@ -16,17 +16,34 @@ public class PatrollCowScript : EnemyComponent
     public IEnumerator Patrolling()
     {
         int direction = 1;
+        float idleAnimMinWait = Random.Range(1, 6);
         if (Random.Range(0, 2) == 1) 
         {
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
             direction = 1;
         } 
         else 
         {
-            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
             direction = -1;
-        } 
-        yield return new WaitForSeconds(Random.Range(1, 6));
+        }
+
+        float elapsedIdleSeconds = 0;
+        
+        
+        do
+        { // We wait to the patroller to end its shooting animation (Which is the idle state) Once it finishes it repeats the cycle until the elapsed time in idle state is equal or higher the predefined time for the Idle State
+            yield return new WaitForSeconds(gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
+                .length/2);
+            yield return StartCoroutine(ShootCoroutine()); //We make it shoot the bullet at the middle of the animation
+            yield return new WaitForSeconds(gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
+                .length/2);
+            elapsedIdleSeconds += gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
+                .length;
+            
+        } while (elapsedIdleSeconds < idleAnimMinWait);
+        
+        
         float patrollSeconds = 0;
         gameObject.GetComponent<Animator>().SetBool("Idle", false);
         gameObject.GetComponent<Animator>().SetBool("Walk", true);
