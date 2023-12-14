@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 38
+  controlID: 106
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 39
+  controlID: 38
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 40
+  controlID: 39
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -314,7 +314,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_MixersTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 966cffff
+    m_SelectedIDs: 
     m_LastClickedID: -37738
     m_ExpandedIDs: 12eb343c
     m_RenameOverlay:
@@ -506,7 +506,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Menus/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -514,16 +514,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Menus/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\tomih\OneDrive\Escritorio\JUEGO SP3 2023\SPGameDesign
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 2e570000
-    m_LastClickedID: 22318
-    m_ExpandedIDs: 000000002e57000030570000325700003457000036570000385700003a5700003c5700003e570000405700004257000044570000465700006c57000000ca9a3b
+    scrollPos: {x: 0, y: 43}
+    m_SelectedIDs: 64560000
+    m_LastClickedID: 22116
+    m_ExpandedIDs: 00000000345600004a56000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -551,7 +551,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002e57000030570000325700003457000036570000385700003a5700003c5700003e57000040570000425700004457000046570000
+    m_ExpandedIDs: 0000000034560000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -578,7 +578,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000e056000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -695,7 +695,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 3e9bffff449bffff4a9bffff629bffffe4d5ffff8ce5ffff1cfbffff145600005e560000ba560000c6560000
+      m_ExpandedIDs: 28eeffffeaefffff80f7ffffc8f7ffffcef8ffff34f9ffff84fafffff65a0000885b00000c5c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1102,9 +1102,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 639.7105, y: 321.7026, z: -3.3598173}
+    m_Target: {x: 852.62335, y: 361.533, z: -19.719252}
     speed: 2
-    m_Value: {x: 639.7105, y: 321.7026, z: -3.3598173}
+    m_Value: {x: 852.62335, y: 361.533, z: -19.719252}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1154,9 +1154,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 375.3029
+    m_Target: 744.5721
     speed: 2
-    m_Value: 375.3029
+    m_Value: 744.5721
   m_Ortho:
     m_Target: 1
     speed: 2
