@@ -15,6 +15,6 @@ MonoBehaviour:
   power: 1
   offset: 0.3
   speed: 2
-  bala: {fileID: 0}
+  bala: {fileID: 21300000, guid: 4ee8cf3d79cc4e54dada5004ef27fcbc, type: 3}
   pistola: {fileID: 0}
   disparos: 9999

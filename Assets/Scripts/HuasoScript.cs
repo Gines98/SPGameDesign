@@ -127,9 +127,19 @@ public class HuasoScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if (collision.collider.tag == "Enemy")
+        if (collision.collider.tag == "Enemy" || collision.collider.GetComponent<Bala>())
         {
             StartCoroutine(Hurt());
+            if (collision.collider.GetComponent<Bala>())
+            {
+                health -= collision.collider.GetComponent<Bala>().power;
+                if (health <= 0)
+                {
+                    health = 0;
+                    alive = false;
+                    RunHuasoRun.instance.LevelEnd(false);
+                }
+            }
         }
         if (collision.collider.tag == "EndGame")
         {

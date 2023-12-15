@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: Bull_Config
   m_EditorClassIdentifier: 
   isMovable: 1
+  health: 5
   enemyType: 1
-  damage: 10
+  damage: 5
   destructible: 0
   speed: 5
-  thrust: 200
+  gunSpeed: 3
+  gunDelay: 1
+  thrust: 100
   spawnSound: {fileID: 0}
+  bulletSprite: {fileID: 0}
