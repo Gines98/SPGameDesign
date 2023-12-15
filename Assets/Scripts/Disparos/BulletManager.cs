@@ -78,6 +78,7 @@ public class BulletManager : MonoBehaviour
         if (sprite != null)
         {
             disparo.GetComponent<SpriteRenderer>().sprite = sprite;
+            disparo.GetComponent<SpriteRenderer>().color = Color.white;
         }
         disparo.GetComponent<Bala>().power = power;
         disparo.GetComponent<Bala>().ignoreTag = ignoreTag;

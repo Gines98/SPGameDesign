@@ -12,6 +12,9 @@ public class PlayerConfigObject : ScriptableObject
     [Range(1, 4)]
     [Tooltip("Sets the player's speed")]
     public float speed = 3;
+    [Range(1,100)]
+    [Tooltip("Sets the player's jump height")]
+    public float jump;
 
 
     public void ReturnDefaultValues()

@@ -10,6 +10,8 @@ public class HuasoScript : MonoBehaviour
     public int health;
     [Tooltip("Player Speed inherited Scriptable Object")]
     public float speed;
+    [Tooltip("Player Jump Force")]
+    public float jumpPower;
     [Tooltip("is the player alive?")]
     public bool alive;
     [Tooltip("is the player jumping?")]
@@ -26,6 +28,7 @@ public class HuasoScript : MonoBehaviour
     {
         health = configObject.startingHealth;
         speed = configObject.speed;
+        jumpPower = configObject.jump;
         jumping = false;
         alive = true;
         beignHurt = false;
@@ -61,7 +64,7 @@ public class HuasoScript : MonoBehaviour
                 if (!jumping)
                 {
                     jumping = true;
-                    GetComponent<Rigidbody2D>().AddForce(Vector3.up * speed * 25);                    
+                    GetComponent<Rigidbody2D>().AddForce(Vector3.up * jumpPower);                    
                 }
             }
             if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))

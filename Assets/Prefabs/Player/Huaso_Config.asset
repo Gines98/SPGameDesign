@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   speed: 3
+  jump: 32
