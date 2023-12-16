@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -46,7 +47,18 @@ public class BullScript : EnemyComponent
     private void Update()
     {
 
-        gameObject.GetComponent<Rigidbody2D>().velocity = transform.right * (-configParameters.speed);
+        if(RunHuasoRun.instance.endlessLevel)
+        {
+            float difficulty = Time.timeSinceLevelLoad / 30;
+            if (difficulty < 1) difficulty = 1;
+            if (difficulty > 5) difficulty = 5;
+            gameObject.GetComponent<Rigidbody2D>().velocity = transform.right * (-configParameters.speed * (difficulty/2));
+        }
+        else
+        {
+            gameObject.GetComponent<Rigidbody2D>().velocity = transform.right * (-configParameters.speed);
+        }
+
         //transform.position -= transform.right * configParameters.speed * Time.deltaTime;
 
     }

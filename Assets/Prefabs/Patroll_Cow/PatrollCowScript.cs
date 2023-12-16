@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PatrollCowScript : EnemyComponent
 {
-
+    private float difficulty;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +32,9 @@ public class PatrollCowScript : EnemyComponent
         
         
         do
-        { // We wait to the patroller to end its shooting animation (Which is the idle state) Once it finishes it repeats the cycle until the elapsed time in idle state is equal or higher the predefined time for the Idle State
+        { 
+            
+            // We wait to the patroller to end its shooting animation (Which is the idle state) Once it finishes it repeats the cycle until the elapsed time in idle state is equal or higher the predefined time for the Idle State
             yield return new WaitForSeconds(gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
                 .length/2);
             yield return StartCoroutine(ShootCoroutine(direction, Time.deltaTime)); //We make it shoot the bullet at the middle of the animation
@@ -51,7 +53,16 @@ public class PatrollCowScript : EnemyComponent
         {
             patrollSeconds += Time.deltaTime;
 
-            gameObject.GetComponent<Rigidbody2D>().velocity =  transform.right * (direction * configParameters.speed);
+            if (RunHuasoRun.instance.endlessLevel)
+            {
+                gameObject.GetComponent<Rigidbody2D>().velocity =  transform.right * (direction * configParameters.speed * difficulty * 2);
+            }
+            else
+            {
+                gameObject.GetComponent<Rigidbody2D>().velocity =  transform.right * (direction * configParameters.speed);
+            }
+
+
             //    transform.position += transform.right * Time.deltaTime * configParameters.speed * direction;
             
             yield return new WaitForEndOfFrame();
@@ -67,6 +78,14 @@ public class PatrollCowScript : EnemyComponent
     void Update()
     {
         base.Update();
+        if (RunHuasoRun.instance.endlessLevel)
+        {
+            difficulty = RunHuasoRun.instance.elapsedTime / 30;
+            if (difficulty < 1) difficulty = 1;
+            if (difficulty > 5) difficulty = 5;
+        
+            transform.position -= transform.right * Time.deltaTime * difficulty;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
