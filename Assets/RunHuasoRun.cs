@@ -7,6 +7,7 @@ public class RunHuasoRun : MonoBehaviour
     public int score;
     public float elapsedTime;
     public GameObject playerGameObject;
+    public GameObject pistolaGameObject;
     public bool endlessLevel;
     public static RunHuasoRun instance;
     public AudioSource musicPlayer;

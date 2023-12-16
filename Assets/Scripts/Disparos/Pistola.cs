@@ -9,7 +9,7 @@ public class Pistola : MonoBehaviour
     float speed;
     Sprite bala;
     [SerializeField] Pistola_Tipo pistolaDefault;
-    int disparos_restantes;
+    public int disparos_restantes;
     // Start is called before the first frame update
     void Start()
     {

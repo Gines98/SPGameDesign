@@ -199,4 +199,9 @@ public class HuasoScript : MonoBehaviour
     {
         // Lógica para activar temporalmente un arma...
     }
+
+    public int getHealt()
+    {
+        return health;
+    }
 }
