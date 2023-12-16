@@ -46,8 +46,9 @@ public class BullScript : EnemyComponent
     private void Update()
     {
 
-        transform.position -= transform.right * configParameters.speed * Time.deltaTime;
-            
+        gameObject.GetComponent<Rigidbody2D>().velocity = transform.right * (-configParameters.speed);
+        //transform.position -= transform.right * configParameters.speed * Time.deltaTime;
+
     }
 
 }

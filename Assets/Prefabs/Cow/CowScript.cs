@@ -28,14 +28,6 @@ public class CowScript : EnemyComponent
     void Update()
     {
         base.Update();
-        if (RunHuasoRun.instance.endlessLevel)
-        {
-            float difficulty = RunHuasoRun.instance.elapsedTime / 30;
-            if (difficulty < 1) difficulty = 1;
-            if (difficulty > 5) difficulty = 5;
-        
-            transform.position -= transform.right * Time.deltaTime * difficulty;
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

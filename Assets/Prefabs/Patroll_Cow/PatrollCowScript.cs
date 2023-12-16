@@ -51,7 +51,8 @@ public class PatrollCowScript : EnemyComponent
         {
             patrollSeconds += Time.deltaTime;
 
-                transform.position += transform.right * Time.deltaTime * configParameters.speed * direction;
+            gameObject.GetComponent<Rigidbody2D>().velocity =  transform.right * (direction * configParameters.speed);
+            //    transform.position += transform.right * Time.deltaTime * configParameters.speed * direction;
             
             yield return new WaitForEndOfFrame();
         } while (patrollSeconds < 3);
