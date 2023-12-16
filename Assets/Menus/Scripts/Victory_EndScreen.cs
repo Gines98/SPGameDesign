@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Victory_EndScreen : MonoBehaviour
 {
-    public void ExitToMenu(string Main_Menu)
+    public void ExitToMenu()
     {
-        SceneManager.LoadScene(Main_Menu);
+        SceneManager.LoadScene("Main_Menu");
     }
 }

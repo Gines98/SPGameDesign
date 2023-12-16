@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HuasoScript : MonoBehaviour
 {
@@ -42,7 +43,7 @@ public class HuasoScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (alive)
+        if (health > 0)
         {
 
 #if UNITY_STANDALONE
@@ -125,29 +126,27 @@ public class HuasoScript : MonoBehaviour
 
 #endif
         }
+        else { SceneManager.LoadScene("Defeat_EndScreen"); }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
-        if (collision.collider.tag == "Enemy" || collision.collider.GetComponent<Bala>())
+        if (collision.collider.tag == "Enemy" || collision.collider.GetComponent<Bala>()) 
         {
             StartCoroutine(Hurt());
             if (collision.collider.GetComponent<Bala>())
             {
-                health -= collision.collider.GetComponent<Bala>().power;
+                health -= collision.collider.GetComponent<Bala>().power; 
+                GetComponent<AudioSource>().Play();
                 if (health <= 0)
                 {
                     health = 0;
                     alive = false;
-                    RunHuasoRun.instance.LevelEnd(false);
+                    SceneManager.LoadScene("Defeat_EndScreen");
                 }
             }
         }
-        if (collision.collider.tag == "EndGame")
-        {
-            RunHuasoRun.instance.LevelEnd(true);
-        }
+    
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -204,4 +203,5 @@ public class HuasoScript : MonoBehaviour
     {
         return health;
     }
+
 }

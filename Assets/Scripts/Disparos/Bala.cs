@@ -37,12 +37,14 @@ public class Bala : MonoBehaviour
                 if (collision.gameObject.GetComponent<EnemyComponent>().hp <= 0)
                 {
                     Destroy(collision.gameObject);
+                    EnemySound.Inst.GetComponent<AudioSource>().Play();
                 }
             }
 
             if (collision.tag == "Player")
             {
                 collision.gameObject.GetComponent<HuasoScript>().health -= power;
+                collision.gameObject.GetComponent<AudioSource>().Play();
             }
             this.gameObject.SetActive(false);
         }

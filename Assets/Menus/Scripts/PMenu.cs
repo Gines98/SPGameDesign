@@ -43,7 +43,7 @@ public class PMenu : MonoBehaviour
     {
         ObjectPauseMenu.SetActive(false);
         Pause = false;
-
+        BulletManager.Inst.isGamePaused = false;
         Time.timeScale = 1;
         Cursor.visible = true;
         Cursor.lockState= CursorLockMode.None;

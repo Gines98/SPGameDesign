@@ -8,6 +8,7 @@ public class BulletManager : MonoBehaviour
 {
     public static BulletManager Inst { get; private set; }
     public List<GameObject> balas;
+    public bool isGamePaused;
     [SerializeField] GameObject prefabBala;
     // Start is called before the first frame update
     void Start()
