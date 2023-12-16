@@ -17,8 +17,8 @@ MonoBehaviour:
   enemyType: 1
   damage: 5
   destructible: 0
-  speed: 5
-  gunSpeed: 3
+  speed: 2
+  gunSpeed: 1
   gunDelay: 1
   thrust: 100
   spawnSound: {fileID: 0}
