@@ -131,6 +131,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 920224068568865527, guid: 31cedf5c6c4d4b54395bb2a1c0e073fc,
+        type: 3}
+      propertyPath: m_Name
+      value: Bullets
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219462708002526549, guid: 31cedf5c6c4d4b54395bb2a1c0e073fc,
+        type: 3}
+      propertyPath: m_Text
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219462708002526549, guid: 31cedf5c6c4d4b54395bb2a1c0e073fc,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.3647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219462708002526549, guid: 31cedf5c6c4d4b54395bb2a1c0e073fc,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.75294125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219462708002526549, guid: 31cedf5c6c4d4b54395bb2a1c0e073fc,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.8941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219462708002526549, guid: 31cedf5c6c4d4b54395bb2a1c0e073fc,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8e0ec07613e5bc94784fbbc5d47ecec7,
+        type: 3}
     - target: {fileID: 3738987136401715794, guid: 31cedf5c6c4d4b54395bb2a1c0e073fc,
         type: 3}
       propertyPath: m_Sprite
@@ -237,6 +268,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6110937666378940834, guid: 31cedf5c6c4d4b54395bb2a1c0e073fc,
+        type: 3}
+      propertyPath: m_Name
+      value: LifeUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175002951484471594, guid: 31cedf5c6c4d4b54395bb2a1c0e073fc,
+        type: 3}
+      propertyPath: m_Name
+      value: BulletUI
+      objectReference: {fileID: 0}
     - target: {fileID: 6575420499466200913, guid: 31cedf5c6c4d4b54395bb2a1c0e073fc,
         type: 3}
       propertyPath: m_Name
@@ -264,6 +305,12 @@ PrefabInstance:
       addedObject: {fileID: 735445484}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31cedf5c6c4d4b54395bb2a1c0e073fc, type: 3}
+--- !u!1 &369596651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2532479573125669477, guid: b8920bd4a761367478db7fa1359cb935,
+    type: 3}
+  m_PrefabInstance: {fileID: 2018362456507373165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &375460926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -422,7 +469,7 @@ GameObject:
   - component: {fileID: 735445486}
   - component: {fileID: 735445485}
   m_Layer: 5
-  m_Name: Background
+  m_Name: BarraVida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -637,6 +684,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &899163046 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2219462708002526549, guid: 31cedf5c6c4d4b54395bb2a1c0e073fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 338686271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &956068859
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +728,7 @@ MonoBehaviour:
   score: 0
   elapsedTime: 0
   playerGameObject: {fileID: 5872919938267112701}
+  pistolaGameObject: {fileID: 369596651}
   endlessLevel: 0
   musicPlayer: {fileID: 0}
   musicLose: {fileID: 0}
@@ -1536,7 +1596,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.7, y: 1.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214350785
@@ -1552,18 +1612,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.83921576, g: 0.20784315, b: 0.17254902, a: 1}
+  m_Color: {r: 0.8941177, g: 0.20784315, b: 0.18039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 0cb01de5ff77e8d4198ffd34471e20dd, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -2316,6 +2376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barraVida: {fileID: 1214350785}
+  bullets: {fileID: 899163046}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
