@@ -13,6 +13,7 @@ public class Pickup : MonoBehaviour
             {
                 // Suma 5 puntos de vida al jugador.
                 collision.collider.GetComponent<HuasoScript>().SumarVida(5);
+                PickUpSound.Inst.GetComponent<AudioSource>().Play();
             }
             else if (gameObject.CompareTag("Arma1"))
             {

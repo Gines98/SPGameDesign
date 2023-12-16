@@ -551,8 +551,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.113479175, y: 0}
   m_AnchorMax: {x: 0.40281257, y: 1}
-  m_AnchoredPosition: {x: 1.3925781, y: 214.6861}
-  m_SizeDelta: {x: -10.9257, y: -857.489}
+  m_AnchoredPosition: {x: 1.3925781, y: 211.4091}
+  m_SizeDelta: {x: -10.9257, y: -864.0431}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348943543
 MonoBehaviour:
@@ -1356,7 +1356,7 @@ GameObject:
   - component: {fileID: 628337091}
   - component: {fileID: 628337090}
   m_Layer: 5
-  m_Name: ControlsButton
+  m_Name: EndlessButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1485,10 +1485,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 320918768}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2113757721}
+        m_TargetAssemblyTypeName: EndlessMenu, Assembly-CSharp
+        m_MethodName: Endless
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1496,18 +1496,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 609417024}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &740395150
 GameObject:
@@ -2235,8 +2223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.730896, y: -239.4805}
-  m_SizeDelta: {x: 27.338379, y: 549.014}
+  m_AnchoredPosition: {x: -1.730896, y: -297.6483}
+  m_SizeDelta: {x: 27.3384, y: 432.6784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &965177581
 MonoBehaviour:
@@ -4459,7 +4447,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Controls
+  m_Text: Endless
 --- !u!222 &2027842478
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4624,6 +4612,7 @@ GameObject:
   - component: {fileID: 2113757715}
   - component: {fileID: 2113757719}
   - component: {fileID: 2113757720}
+  - component: {fileID: 2113757721}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4741,6 +4730,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 8dce4b2c62ba9ec42b4b67df4cce3e49, type: 2}
+--- !u!114 &2113757721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113757714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b5936f7a761484f848d959e325b060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2117022690
 GameObject:
   m_ObjectHideFlags: 0
