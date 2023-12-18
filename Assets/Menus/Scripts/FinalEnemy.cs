@@ -14,9 +14,9 @@ public class FinalEnemy : MonoBehaviour
     // Update is called once per frame
     void OnDestroy()
     {
-        if (gameObject.GetComponent<EnemyComponent>().hp <= 0)
-        {
+        //if (gameObject.GetComponent<EnemyComponent>().hp <= 0)
+        //{
             SceneManager.LoadScene("Victory_EndScreen");
-        }
+       // }
     }
 }

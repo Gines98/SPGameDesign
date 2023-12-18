@@ -31,7 +31,10 @@ public class Victory_EndScreen : MonoBehaviour
     {
         if (RunHuasoRun.instance)
         {
-            Destroy(RunHuasoRun.instance);
+            Destroy(RunHuasoRun.instance.gameObject);
+            yield return new WaitForFixedUpdate();
+            RunHuasoRun.instance = null;
+            yield return new WaitForFixedUpdate();
         }
 
         yield return new WaitForFixedUpdate();

@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="221f2bf1-d997-4e4e-8511-17c139c07cef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPGameDesign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPGameDesign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HUD/Scripts/HUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HUD/Scripts/HUD.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Menus/Scripts/Victory_EndScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menus/Scripts/Victory_EndScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Crate1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Crate1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/WoodLogs.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/WoodLogs.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RunHuasoRun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RunHuasoRun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Defeat_EndScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Defeat_EndScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Endless.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Endless.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HuasoScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HuasoScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Disparos/Pistolas/Pistola_Default.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Disparos/Pistolas/Pistola_Default.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +108,7 @@
       <workItem from="1702520082992" duration="4276000" />
       <workItem from="1702612033842" duration="795000" />
       <workItem from="1702862700969" duration="3746000" />
-      <workItem from="1702896951391" duration="3967000" />
+      <workItem from="1702896951391" duration="5245000" />
     </task>
     <servers />
   </component>
