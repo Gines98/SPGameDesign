@@ -40,6 +40,10 @@ public class RunHuasoRun : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             playerGameObject.transform.position -= playerGameObject.transform.right * Time.deltaTime;
+            if (transform.position.x < -6.643)
+            {
+                playerGameObject.transform.position.Set(-6.643f, playerGameObject.transform.position.y, playerGameObject.transform.position.z);
+            }
         }
     }
 
