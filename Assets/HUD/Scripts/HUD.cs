@@ -16,6 +16,6 @@ public class HUD : MonoBehaviour
      
         barraVida.fillAmount = RunHuasoRun.instance.playerGameObject.GetComponent<HuasoScript>().health / 100f;
         bullets.text = RunHuasoRun.instance.pistolaGameObject.GetComponent<Pistola>().disparos_restantes.ToString();
-        scoreText.text = RunHuasoRun.instance.score.ToString();
+        scoreText.text = "Score: " + RunHuasoRun.instance.score.ToString();
     }
 }

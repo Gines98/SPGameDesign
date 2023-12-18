@@ -1752,7 +1752,6 @@ GameObject:
   - component: {fileID: 484317829}
   - component: {fileID: 484317828}
   - component: {fileID: 484317827}
-  - component: {fileID: 484317830}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1834,27 +1833,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &484317830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484317826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd19d7ee5c1392c4ba6f2c793768a786, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  elapsedTime: 0
-  playerGameObject: {fileID: 1064766179}
-  pistolaGameObject: {fileID: 24930744}
-  endlessLevel: 1
-  musicPlayer: {fileID: 583580198}
-  musicLose: {fileID: 8300000, guid: 7dc6d9d33c1b5df488a74c4695eb3f31, type: 3}
-  winUI: {fileID: 1587564355}
-  loseUI: {fileID: 1028730761}
 --- !u!1 &495981146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,7 +1922,7 @@ GameObject:
   - component: {fileID: 505114150}
   m_Layer: 0
   m_Name: Bounds (1)
-  m_TagString: Untagged
+  m_TagString: PlayerBound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3434,7 +3412,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d500c2c5fcfc7484b83485bee5ee6917, type: 3}
+    m_Font: {fileID: 12800000, guid: 4beb055f07aaff244873dec698d0363e, type: 3}
     m_FontSize: 74
     m_FontStyle: 1
     m_BestFit: 0
@@ -3471,7 +3449,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 735.06, y: 466.15}
+  m_AnchoredPosition: {x: 723.85, y: 466.15}
   m_SizeDelta: {x: 470.92426, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &947149732
@@ -4380,7 +4358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barraVida: {fileID: 463556322}
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 937980711}
   bullets: {fileID: 1692330488}
 --- !u!1 &1071206613
 GameObject:
@@ -6977,7 +6955,7 @@ GameObject:
   - component: {fileID: 1950131741}
   m_Layer: 0
   m_Name: PlayerBound
-  m_TagString: Untagged
+  m_TagString: PlayerBound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7807,6 +7785,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a18567a397b185a4cba8bd735bcd083b, type: 3}
+--- !u!1 &2106964859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2106964861}
+  - component: {fileID: 2106964860}
+  m_Layer: 5
+  m_Name: PersistentEndless
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2106964860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106964859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd19d7ee5c1392c4ba6f2c793768a786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  elapsedTime: 0
+  playerGameObject: {fileID: 1064766179}
+  pistolaGameObject: {fileID: 24930744}
+  endlessLevel: 1
+  musicPlayer: {fileID: 583580198}
+  musicLose: {fileID: 8300000, guid: 7dc6d9d33c1b5df488a74c4695eb3f31, type: 3}
+  winUI: {fileID: 1587564355}
+  loseUI: {fileID: 1028730761}
+--- !u!224 &2106964861
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106964859}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2124019521
 GameObject:
   m_ObjectHideFlags: 0
@@ -8161,6 +8196,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 484317829}
+  - {fileID: 2106964861}
   - {fileID: 1112419844}
   - {fileID: 761333485}
   - {fileID: 774875768}

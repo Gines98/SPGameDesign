@@ -29,6 +29,9 @@ public class RunHuasoRun : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        
+        if(endlessLevel)
+            DontDestroyOnLoad(gameObject);
     }
 
     private void Update()

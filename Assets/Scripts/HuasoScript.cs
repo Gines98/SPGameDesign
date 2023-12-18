@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -137,6 +138,9 @@ public class HuasoScript : MonoBehaviour
         else { SceneManager.LoadScene("Defeat_EndScreen"); }
     }
 
+    
+    public bool isCollidingWithObstacle;
+    public bool isCollidingWithBounds;
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Enemy" || collision.collider.GetComponent<Bala>()) 
@@ -154,7 +158,42 @@ public class HuasoScript : MonoBehaviour
                 }
             }
         }
+        
+        if (collision.gameObject.tag == "Obstacle")
+        {
+            isCollidingWithObstacle = true;
+        }
+        else if (collision.gameObject.tag == "PlayerBound")
+        {
+            isCollidingWithBounds = true;
+        }
+
+        CheckForBothCollisions();
     
+    }
+    
+    private void CheckForBothCollisions()
+    {
+        if (isCollidingWithObstacle && isCollidingWithBounds)
+        {
+
+                health = 0;
+                alive = false;
+                SceneManager.LoadScene("Defeat_EndScreen");
+            
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Obstacle")
+        {
+            isCollidingWithObstacle = false;
+        }
+        else if (other.gameObject.tag == "PlayerBound")
+        {
+            isCollidingWithBounds = false;
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)

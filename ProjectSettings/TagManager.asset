@@ -12,6 +12,8 @@ TagManager:
   - Arma1
   - Arma2
   - Arma3
+  - Obstacle
+  - PlayerBound
   layers:
   - Default
   - TransparentFX
