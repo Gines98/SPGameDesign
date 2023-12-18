@@ -1,38 +1,56 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Update()
     {
-        if (collision.collider.CompareTag("Player"))
+        if (RunHuasoRun.instance.endlessLevel)
         {
-            // Acciones específicas según el tag del objeto con el que colisiona el jugador.
+            float difficulty = RunHuasoRun.instance.elapsedTime / 30;
+            if (difficulty < 1) difficulty = 1;
+            if (difficulty > 5) difficulty = 5;
+
+            transform.position -= transform.right * Time.deltaTime * difficulty;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            // Acciones especï¿½ficas segï¿½n el tag del objeto con el que colisiona el jugador.
             if (gameObject.CompareTag("Vida"))
             {
                 // Suma 5 puntos de vida al jugador.
-                collision.collider.GetComponent<HuasoScript>().SumarVida(5);
+                other.gameObject.GetComponent<HuasoScript>().SumarVida(5);
                 PickUpSound.Inst.GetComponent<AudioSource>().Play();
             }
             else if (gameObject.CompareTag("Arma1"))
             {
-                // Cambia el arma actual por otra (implementa la lógica en el script del jugador).
-                collision.collider.GetComponent<HuasoScript>().CambiarArma("Arma1");
+                // Cambia el arma actual por otra (implementa la lï¿½gica en el script del jugador).
+                other.gameObject.GetComponent<HuasoScript>().CambiarArma("Arma1");
             }
             else if (gameObject.CompareTag("Arma2"))
             {
-                // Cambia el arma actual por otra (implementa la lógica en el script del jugador).
-                collision.collider.GetComponent<HuasoScript>().CambiarArma("Arma2");
+                // Cambia el arma actual por otra (implementa la lï¿½gica en el script del jugador).
+                other.gameObject.GetComponent<HuasoScript>().CambiarArma("Arma2");
             }
             else if (gameObject.CompareTag("Arma3"))
             {
-                // Cambia el arma actual por otra durante 30 segundos (implementa la lógica en el script del jugador).
-                collision.collider.GetComponent<HuasoScript>().ActivarArmaTemporal("Arma3", 30f);
+                // Cambia el arma actual por otra durante 30 segundos (implementa la lï¿½gica en el script del jugador).
+                other.gameObject.GetComponent<HuasoScript>().ActivarArmaTemporal("Arma3", 30f);
             } 
 
-            // Destruye el objeto después de la colisión.
+            // Destruye el objeto despuï¿½s de la colisiï¿½n.
             Destroy(gameObject);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
     }
 }

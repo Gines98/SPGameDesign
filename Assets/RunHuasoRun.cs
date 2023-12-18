@@ -60,7 +60,7 @@ public class RunHuasoRun : MonoBehaviour
     public void LevelEnd(bool win)
     {
         Destroy(playerGameObject.GetComponent<Rigidbody2D>());
-        Destroy(FindObjectOfType<UIINfo>().gameObject);
+        //Destroy(FindObjectOfType<UIINfo>().gameObject);
         playerGameObject.GetComponent<HuasoScript>().alive = false;
         playerGameObject.GetComponent<Animator>().SetBool("Idle", true);
         playerGameObject.GetComponent<Animator>().SetBool("Running", false);

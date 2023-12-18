@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class HUD : MonoBehaviour
 {
     public Image barraVida;
-
+    public Text scoreText;
     public Text bullets;
 
     // Update is called once per frame
@@ -16,6 +16,6 @@ public class HUD : MonoBehaviour
      
         barraVida.fillAmount = RunHuasoRun.instance.playerGameObject.GetComponent<HuasoScript>().health / 100f;
         bullets.text = RunHuasoRun.instance.pistolaGameObject.GetComponent<Pistola>().disparos_restantes.ToString();
-        
+        scoreText.text = RunHuasoRun.instance.score.ToString();
     }
 }

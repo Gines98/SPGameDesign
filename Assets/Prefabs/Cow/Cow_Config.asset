@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Cow_Config
   m_EditorClassIdentifier: 
   isMovable: 0
-  health: 20
+  health: 10
+  score: 10
   enemyType: 2
   damage: 10
   destructible: 1

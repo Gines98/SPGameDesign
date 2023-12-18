@@ -18,6 +18,8 @@ public class EnemyConfigObject : ScriptableObject
     public bool isMovable = false;
     [Tooltip("The health of the enemy")]
     public int health;
+    [Tooltip("The score given by the enemy once the player KILLS it")]
+    public int score;
     [Tooltip("Set ups the enemy type")]    
     public ENEMY_TYPE enemyType = ENEMY_TYPE.STATIC_ENEMY_NOGUN;
     [Tooltip("Damage dealed by the enemy to the player")]

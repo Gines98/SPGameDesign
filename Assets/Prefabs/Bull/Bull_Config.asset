@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMovable: 1
   health: 5
+  score: 5
   enemyType: 1
   damage: 5
   destructible: 0

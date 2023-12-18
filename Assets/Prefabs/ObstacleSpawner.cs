@@ -30,10 +30,10 @@ public class ObstacleSpawner : MonoBehaviour
 
     public IEnumerator SpawnerEmpanadas()
     {
-        if (Random.Range(0, 2) == 1)
+        if (AuxiliaryClass.RandomBool())
         {
             GameObject empanada = Instantiate(empanadaPrefab);
-            empanada.transform.position = new Vector2(transform.position.x, transform.position.y + 1.5f);
+            empanada.transform.position = new Vector2(transform.position.x, transform.position.y + 0.5f);
         }
 
         yield return new WaitForSeconds(Random.Range(1.0f, 10.0f));

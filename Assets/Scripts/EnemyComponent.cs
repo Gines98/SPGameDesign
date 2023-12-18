@@ -7,6 +7,7 @@ public class EnemyComponent : MonoBehaviour
 {
     public EnemyConfigObject configParameters;
     public int hp;
+    public int scoreByKill;
     public GameObject bulletSpawnPoint;
     public GameObject bulletPrefab;
     public int speed;
@@ -15,6 +16,7 @@ public class EnemyComponent : MonoBehaviour
     {
         hp = configParameters.health;
         speed = configParameters.speed;
+        scoreByKill = configParameters.score;
         if (GetComponent<Rigidbody2D>())
         {
             if (RunHuasoRun.instance.endlessLevel)

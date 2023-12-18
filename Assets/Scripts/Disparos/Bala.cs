@@ -37,6 +37,7 @@ public class Bala : MonoBehaviour
                 if (collision.gameObject.GetComponent<EnemyComponent>().hp <= 0)
                 {
                     Destroy(collision.gameObject);
+                    RunHuasoRun.instance.score += collision.gameObject.GetComponent<EnemyComponent>().scoreByKill;
                     EnemySound.Inst.GetComponent<AudioSource>().Play();
                 }
             }
