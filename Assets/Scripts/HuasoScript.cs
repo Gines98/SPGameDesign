@@ -44,6 +44,10 @@ public class HuasoScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health >= 100)
+        {
+            health = 100;
+        }
         if (health > 0)
         {
 
