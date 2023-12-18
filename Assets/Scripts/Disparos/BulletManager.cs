@@ -75,7 +75,19 @@ public class BulletManager : MonoBehaviour
         disparo.SetActive(true);
         disparo.transform.position = pos;
         disparo.transform.rotation = rotation;
-        disparo.GetComponent<Rigidbody2D>().AddForce(disparo.transform.right * speed, ForceMode2D.Impulse);
+        if (RunHuasoRun.instance.endlessLevel)
+        {
+            float difficulty = RunHuasoRun.instance.elapsedTime / 30;
+            if (difficulty < 1) difficulty = 1;
+            if (difficulty > 5) difficulty = 5;
+        
+            //transform.position -= transform.right * (Time.deltaTime * difficulty);
+            disparo.GetComponent<Rigidbody2D>().AddForce(disparo.transform.right * (speed * difficulty), ForceMode2D.Impulse);
+        }
+        else
+        {
+            disparo.GetComponent<Rigidbody2D>().AddForce(disparo.transform.right * speed, ForceMode2D.Impulse);
+        }
         if (sprite != null)
         {
             disparo.GetComponent<SpriteRenderer>().sprite = sprite;

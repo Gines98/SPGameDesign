@@ -52,7 +52,7 @@ public class BullScript : EnemyComponent
             float difficulty = Time.timeSinceLevelLoad / 30;
             if (difficulty < 1) difficulty = 1;
             if (difficulty > 5) difficulty = 5;
-            gameObject.GetComponent<Rigidbody2D>().velocity = transform.right * (-configParameters.speed * (difficulty/2));
+            gameObject.GetComponent<Rigidbody2D>().velocity = transform.right * (-configParameters.speed * (difficulty));
         }
         else
         {

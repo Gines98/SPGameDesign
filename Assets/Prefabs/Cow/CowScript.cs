@@ -1,15 +1,24 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CowScript : EnemyComponent
 {
+    private void Awake()
+    {
+        if (RunHuasoRun.instance.endlessLevel && AuxiliaryClass.RandomBool())
+        {
+            gameObject.transform.localRotation = Quaternion.Euler(0,180,0);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         base.Start();
         StartCoroutine(ThrowObject());
+        
     }
 
     IEnumerator ThrowObject()
@@ -28,6 +37,15 @@ public class CowScript : EnemyComponent
     void Update()
     {
         base.Update();
+        
+        if (RunHuasoRun.instance.endlessLevel)
+        {
+            float difficulty = RunHuasoRun.instance.elapsedTime / 30;
+            if (difficulty < 1) difficulty = 1;
+            if (difficulty > 5) difficulty = 5;
+        
+            transform.position -= transform.right * (Time.deltaTime * difficulty);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

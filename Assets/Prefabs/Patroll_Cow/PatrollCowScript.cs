@@ -29,21 +29,28 @@ public class PatrollCowScript : EnemyComponent
         }
 
         float elapsedIdleSeconds = 0;
-        
-        
-        do
-        { 
+
+        if (!RunHuasoRun.instance.endlessLevel)
+        {
+            do
+            { 
             
-            // We wait to the patroller to end its shooting animation (Which is the idle state) Once it finishes it repeats the cycle until the elapsed time in idle state is equal or higher the predefined time for the Idle State
-            yield return new WaitForSeconds(gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
-                .length/2);
-            yield return StartCoroutine(ShootCoroutine(direction, Time.deltaTime)); //We make it shoot the bullet at the middle of the animation
-            yield return new WaitForSeconds(gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
-                .length/2);
-            elapsedIdleSeconds += gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
-                .length;
+                // We wait to the patroller to end its shooting animation (Which is the idle state) Once it finishes it repeats the cycle until the elapsed time in idle state is equal or higher the predefined time for the Idle State
+                yield return new WaitForSeconds(gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
+                    .length/2);
+                yield return StartCoroutine(ShootCoroutine(direction, Time.deltaTime)); //We make it shoot the bullet at the middle of the animation
+                yield return new WaitForSeconds(gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
+                    .length/2);
+                elapsedIdleSeconds += gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
+                    .length;
             
-        } while (elapsedIdleSeconds < idleAnimMinWait);
+            } while (elapsedIdleSeconds < idleAnimMinWait);
+        }
+        else
+        {
+            
+        }
+  
         
         
         float patrollSeconds = 0;
@@ -55,11 +62,22 @@ public class PatrollCowScript : EnemyComponent
 
             if (RunHuasoRun.instance.endlessLevel)
             {
-                gameObject.GetComponent<Rigidbody2D>().velocity =  transform.right * (direction * configParameters.speed * difficulty * 2);
+                gameObject.GetComponent<Animator>().SetBool("Idle", true);
+                gameObject.GetComponent<Animator>().SetBool("Walk", false);
+                gameObject.GetComponent<Rigidbody2D>().velocity =  transform.right * (direction * configParameters.speed * difficulty/2);
+                yield return new WaitForSeconds(gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
+                    .length/2);
+                yield return StartCoroutine(ShootCoroutine(direction, Time.deltaTime)); //We make it shoot the bullet at the middle of the animation
+                yield return new WaitForSeconds(gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip
+                    .length/2);
+                gameObject.GetComponent<Animator>().SetBool("Idle", false);
+                gameObject.GetComponent<Animator>().SetBool("Walk", true);
             }
             else
             {
+                
                 gameObject.GetComponent<Rigidbody2D>().velocity =  transform.right * (direction * configParameters.speed);
+                
             }
 
 
@@ -68,8 +86,11 @@ public class PatrollCowScript : EnemyComponent
             yield return new WaitForEndOfFrame();
         } while (patrollSeconds < 3);
 
-        gameObject.GetComponent<Animator>().SetBool("Idle", true);
-        gameObject.GetComponent<Animator>().SetBool("Walk", false);
+        if (!RunHuasoRun.instance.endlessLevel)
+        {
+            gameObject.GetComponent<Animator>().SetBool("Idle", true);
+            gameObject.GetComponent<Animator>().SetBool("Walk", false);
+        }
 
         StartCoroutine(Patrolling());
     }

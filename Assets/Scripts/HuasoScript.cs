@@ -65,7 +65,15 @@ public class HuasoScript : MonoBehaviour
                 if (!jumping)
                 {
                     jumping = true;
-                    GetComponent<Rigidbody2D>().AddForce(Vector3.up * jumpPower);                    
+                    if (RunHuasoRun.instance.endlessLevel)
+                    {
+                        GetComponent<Rigidbody2D>().AddForce(Vector3.up * (speed * 10));   
+                    }
+                    else
+                    {
+                        GetComponent<Rigidbody2D>().AddForce(Vector3.up * jumpPower);    
+                    }
+                
                 }
             }
             if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))

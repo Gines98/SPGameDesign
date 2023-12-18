@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="221f2bf1-d997-4e4e-8511-17c139c07cef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPGameDesign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPGameDesign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bull/Bull.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bull/Bull.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bala.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bala.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bull/BullScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bull/BullScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullets/BalaPatroller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullets/BalaPatroller.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cow/CowScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cow/CowScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/PatrollCowScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/PatrollCowScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/PatrollCow_Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Patroll_Cow/PatrollCow_Config.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Endless.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Endless.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Disparos/BulletManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Disparos/BulletManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HuasoScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HuasoScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "Features/EndlessLevel",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -108,6 +114,7 @@
       <workItem from="1702352814475" duration="814000" />
       <workItem from="1702520082992" duration="4276000" />
       <workItem from="1702612033842" duration="795000" />
+      <workItem from="1702862700969" duration="3746000" />
     </task>
     <servers />
   </component>

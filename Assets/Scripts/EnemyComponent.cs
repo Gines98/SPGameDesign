@@ -15,6 +15,18 @@ public class EnemyComponent : MonoBehaviour
     {
         hp = configParameters.health;
         speed = configParameters.speed;
+        if (GetComponent<Rigidbody2D>())
+        {
+            if (RunHuasoRun.instance.endlessLevel)
+            {
+                GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+            }
+            else
+            {
+                GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            }
+        }
+
         /*if (bulletPrefab && (configParameters.enemyType == EnemyConfigObject.ENEMY_TYPE.MOVABLE_ENEMY_GUN ||
                              configParameters.enemyType == EnemyConfigObject.ENEMY_TYPE.STATIC_ENEMY_GUN) )
         {
