@@ -53,6 +53,8 @@ public class RunHuasoRun : MonoBehaviour
         {
             StartCoroutine(AddScoreInTime());
         }
+        
+        musicPlayer.volume = 0.1f * PlayerPrefs.GetFloat("Volumen", 1);
     }
 
     //Coroutine for the Endless Runner level

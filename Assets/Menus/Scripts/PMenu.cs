@@ -58,6 +58,20 @@ public class PMenu : MonoBehaviour
 
     public void ExitToMenu(string Main_Menu)
     {
+        StartCoroutine(ExitCoroutine(Main_Menu));
+    }
+
+    public IEnumerator ExitCoroutine(string Main_Menu)
+    {
+        Time.timeScale = 1;
+        if (RunHuasoRun.instance.endlessLevel)
+        {
+            Destroy(RunHuasoRun.instance.gameObject);
+            yield return new WaitForFixedUpdate();
+            RunHuasoRun.instance = null;
+            yield return new WaitForFixedUpdate();
+        }
+        yield return new WaitForFixedUpdate();
         SceneManager.LoadScene(Main_Menu);
     }
 }

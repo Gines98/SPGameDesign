@@ -2238,7 +2238,7 @@ MonoBehaviour:
   playerGameObject: {fileID: 5872919938267112701}
   pistolaGameObject: {fileID: 369596651}
   endlessLevel: 0
-  musicPlayer: {fileID: 0}
+  musicPlayer: {fileID: 1525466622}
   musicLose: {fileID: 0}
   winUI: {fileID: 0}
   loseUI: {fileID: 0}
@@ -4594,10 +4594,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 139795863}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

@@ -28,7 +28,10 @@ public class CowScript : EnemyComponent
         {
             GetComponent<Animator>().SetTrigger("Shoot");
             yield return new WaitForSeconds(0.25f);
-            yield return  StartCoroutine(ShootCoroutine(1,configParameters.gunDelay / difficulty));
+            if(RunHuasoRun.instance.endlessLevel)
+                yield return  StartCoroutine(ShootCoroutine(1,configParameters.gunDelay / difficulty));
+            else
+                yield return  StartCoroutine(ShootCoroutine(1,configParameters.gunDelay));
             //yield return new WaitForSeconds(GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.length / 2);
         } while (true);
 

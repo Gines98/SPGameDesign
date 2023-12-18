@@ -13,7 +13,9 @@ public class FullScreen : MonoBehaviour
 
     public void CcambiarVolumen(float volumen) 
     {
-        audioMixer.SetFloat("Volumen", volumen);
+        //audioMixer.SetFloat("Volumen", volumen);
+        PlayerPrefs.SetFloat("Volumen", volumen);
+        RunHuasoRun.instance.musicPlayer.volume = 0.1f * volumen;
     }
 
     public void CambiarCalidad(int index)
