@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class CowScript : EnemyComponent
 {
-    private void Awake()
+    /*private void Awake()
     {
         if (RunHuasoRun.instance.endlessLevel && AuxiliaryClass.RandomBool())
         {
             gameObject.transform.localRotation = Quaternion.Euler(0,180,0);
         }
-    }
+    }*/
 
     // Start is called before the first frame update
     void Start()
