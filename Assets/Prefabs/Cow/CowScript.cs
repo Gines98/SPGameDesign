@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CowScript : EnemyComponent
 {
+    private float difficulty = 1;
     /*private void Awake()
     {
         if (RunHuasoRun.instance.endlessLevel && AuxiliaryClass.RandomBool())
@@ -27,7 +28,7 @@ public class CowScript : EnemyComponent
         {
             GetComponent<Animator>().SetTrigger("Shoot");
             yield return new WaitForSeconds(0.25f);
-            yield return  StartCoroutine(ShootCoroutine(1,configParameters.gunDelay));
+            yield return  StartCoroutine(ShootCoroutine(1,configParameters.gunDelay / difficulty));
             //yield return new WaitForSeconds(GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.length / 2);
         } while (true);
 
@@ -40,11 +41,11 @@ public class CowScript : EnemyComponent
         
         if (RunHuasoRun.instance.endlessLevel)
         {
-            float difficulty = RunHuasoRun.instance.elapsedTime / 30;
+            difficulty = RunHuasoRun.instance.elapsedTime / 30;
             if (difficulty < 1) difficulty = 1;
             if (difficulty > 5) difficulty = 5;
         
-            transform.position -= transform.right * (Time.deltaTime * difficulty);
+            transform.position += transform.right * (Time.deltaTime * difficulty);
         }
     }
 
