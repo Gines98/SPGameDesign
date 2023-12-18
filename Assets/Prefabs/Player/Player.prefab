@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pistolaDefault: {fileID: 11400000, guid: 8b56313e67496ac439057fb524474752, type: 2}
+  disparos_restantes: 0
 --- !u!1 &5421737995733934948
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +74,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.125, y: 0, z: 8.677469}
-  m_LocalScale: {x: 0.25, y: 0.0625, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8148372694457658484}
@@ -119,9 +120,8 @@ SpriteRenderer:
   m_SortingLayerID: 2106803075
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -893956619, guid: 2edfd0eb34e1fa349824f67025b135d3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -231,7 +231,7 @@ Animator:
   m_GameObject: {fileID: 7449379738655410622}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fa951a397bc555041b49b0b4d996b450, type: 2}
+  m_Controller: {fileID: 9100000, guid: 20bed46ffedecce49b2ffa8c1700faac, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -319,6 +319,7 @@ MonoBehaviour:
   configObject: {fileID: 11400000, guid: d30b8ea7fce7deb488bc7ce9d402c12e, type: 2}
   health: 0
   speed: 0
+  jumpPower: 0
   alive: 0
   jumping: 0
   beignHurt: 0

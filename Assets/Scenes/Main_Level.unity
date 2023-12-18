@@ -5894,6 +5894,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2624840216570025255, guid: b8920bd4a761367478db7fa1359cb935,
+        type: 3}
+      propertyPath: pistolaDefault
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e27eb4883489fa4585c8152fc526f52,
+        type: 2}
     - target: {fileID: 6217235485880386081, guid: b8920bd4a761367478db7fa1359cb935,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6082,6 +6088,7 @@ AudioSource:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 956068861}
   - {fileID: 844021301}
   - {fileID: 1686433090}
   - {fileID: 1525466621}
@@ -6091,7 +6098,6 @@ SceneRoots:
   - {fileID: 375460926}
   - {fileID: 697617094}
   - {fileID: 1502149307}
-  - {fileID: 956068861}
   - {fileID: 2018362456507373165}
   - {fileID: 2114143765}
   - {fileID: 338686271}

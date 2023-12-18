@@ -30,7 +30,7 @@ public class Bala : MonoBehaviour
         if (collision.tag != ignoreTag && !collision.isTrigger)
         {
             BulletManager.Inst.balas.Add(this.gameObject);
-            Debug.Log(collision.gameObject.name);
+            //Debug.Log(collision.gameObject.name);
             if (collision.tag == "Enemy")
             {
                 collision.gameObject.GetComponent<EnemyComponent>().hp -= power;

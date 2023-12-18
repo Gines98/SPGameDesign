@@ -49,6 +49,7 @@ namespace EasyParallax
             var startingPos = transform.position;
 
             //Next duplicate this and add the objects, until we fill our pool
+            bool flip = true;
             for (var i = 1; i < poolSize; i++)
             {
                 var position = new Vector2(CalculateX(startingPos), startingPos.y);
@@ -57,6 +58,8 @@ namespace EasyParallax
                 //It's very important to remove the sprite duplicator script from the copied object
                 //Otherwise we will get an infinite loop of sprite duplication
                 Destroy(duplicatesPool[i].GetComponent<SpriteDuplicator>());
+                duplicatesPool[i].GetComponent<SpriteRenderer>().flipX = flip;
+                flip = !flip;
             }
         }
 
